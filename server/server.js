@@ -16,8 +16,8 @@ app.get('/',(req,res)=>res.send('workkk!'));
 
 // const userGradesRouter = require("./routes/users-grades-router");
 // const newsRouter=require('./routes/usersNews-router');
-// const ScheduleRouter=require('./routes/schedule-router');
-// const usersRouter = require('./routes/users-router');
+const clothingRouter=require('./Routes/clothing-router');
+const usersRouter = require('./Routes/users-router');
 
 // app.use('/news', passport.authenticate("jwt",{session:false}),newsRouter)
 // app.use(passport.initialize());

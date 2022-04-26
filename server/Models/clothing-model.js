@@ -1,0 +1,15 @@
+const mongoose = require("mongoose");
+const schama = mongoose.Schema;
+
+const Clothing = new schama(
+  {
+    Type: { type: String, required: true },
+    Color: { type: String, required: true },
+    Name: { type: String, required: true },
+    Price: { type: Number, required: true },
+    Long: { type: Boolean, required: true },
+    Amount: { type: Number, required: true },
+  },
+  { timestamps: true }
+);
+module.exports = mongoose.model("Clothing", Clothing);
