@@ -1,7 +1,7 @@
 import { createContext, useState } from 'react';
-export const ScheduleContext = createContext();
+export const ClothingContext = createContext();
 
-export const ClothingContext = ({ children }) => {
+export const ClothingContextProvider = ({ children }) => {
     const [clothing, setClothing] = useState({});
     return (
         <ClothingContext.Provider value={{clothing, setClothing} }>

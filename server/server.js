@@ -14,8 +14,6 @@ app.get('/',(req,res)=>res.send('workkk!'));
 
 // passportMiddleware(passport);
 
-// const userGradesRouter = require("./routes/users-grades-router");
-// const newsRouter=require('./routes/usersNews-router');
 const clothingRouter=require('./Routes/clothing-router');
 const usersRouter = require('./Routes/users-router');
 
@@ -24,8 +22,7 @@ const usersRouter = require('./Routes/users-router');
 
  app.use('/users', usersRouter);
  app.use('/clothing', clothingRouter);
-// app.use('/grades' , passport.authenticate("jwt",{session:false}), userGradesRouter);
-// app.use('/schedule', passport.authenticate("jwt",{session:false}), ScheduleRouter)
+
 
 
 app.listen(process.env.PORT);

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "../Features/Footer/footer-component";
 import Navbar from "../Features/Navbar/navbar-component";
 import Home from "../Pages/Home/home-component";
+import Clothing from "../Pages/Clothing/clothing-component";
 // import * as ReactDOM from 'react-dom/client';
 
 const PageRouting = () => {
@@ -13,6 +14,7 @@ const PageRouting = () => {
       <Navbar/> 
         <Routes>
           <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/clothing" element={<Clothing/>}/>
          
         </Routes>
          <Footer/> 
