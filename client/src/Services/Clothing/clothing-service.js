@@ -1,7 +1,7 @@
 const basic_url =
   process.env.NODE_ENV === "production"
-    ? "https://final-on-it-project.herokuapp.com/schedule"
-    : "http://localhost:6500/schedule";
+    ? "https://final-on-it-project.herokuapp.com/clothing"
+    : "http://localhost:3009/clothing";
 export const GetAllClothing = async () => {
   return await fetch(`${basic_url}`, {
     headers: {
