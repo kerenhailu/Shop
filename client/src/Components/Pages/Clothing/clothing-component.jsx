@@ -1,7 +1,9 @@
+// import res from 'express/lib/response';
 import React, { useContext, useEffect } from 'react'
 import { ClothingContext } from '../../../Context/Clothing/clothing-context';
 import { LoadingContext } from '../../../Context/loading/loading-context';
 import { GetAllClothing } from '../../../Services/Clothing/clothing-service';
+import './clothing.css';
 
 export default function Clothing() {
   let {clothing,setClothing}=useContext(ClothingContext);
@@ -12,7 +14,7 @@ export default function Clothing() {
     setLoading(true);
     GetAllClothing()
     .then((data) => {
-      setClothing(data);
+      setClothing(...data);
     })
     .catch(err => console.log(err))
     .finally(() => setLoading(false))
@@ -20,7 +22,7 @@ export default function Clothing() {
   console.log(clothing);
   console.log(loading);
   return (
-    <div>Clothing
+    <div className='ClothingComp'>Clothing
       <div className='cardClothing'>
       <h2>
         Type : {clothing.Type} <br/>

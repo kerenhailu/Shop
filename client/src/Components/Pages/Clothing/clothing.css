@@ -1,0 +1,12 @@
+.cardClothing{
+    width: 30vw;
+    border: 1px solid black;
+    height: auto;
+}
+.ClothingComp{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
