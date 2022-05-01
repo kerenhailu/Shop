@@ -22,7 +22,8 @@ export default function Clothing() {
   console.log(clothing);
   console.log(loading);
   return (
-    <div className='ClothingComp'>Clothing
+    <div className='ClothingComp'>
+      <h1>Clothing</h1><br/>
       <div className='cardClothing'>
       <h2>
         Type : {clothing.Type} <br/>
@@ -31,6 +32,7 @@ export default function Clothing() {
         Long : {clothing.Long}<br/>
         Color : {clothing.Color}<br/>
         Amount : {clothing.Amount}<br/>
+        <button>Buy</button>
       </h2>
 
  </div>
