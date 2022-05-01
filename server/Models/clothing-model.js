@@ -4,6 +4,7 @@ const schama = mongoose.Schema;
 const Clothing = new schama(
   {
     Type: { type: String, required: true },
+    Img: { type: String, required: true },
     Color: { type: String, required: true },
     Name: { type: String, required: true },
     Price: { type: Number, required: true },
