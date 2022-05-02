@@ -8,7 +8,10 @@ import Cart from "../Pages/ShoppingCart/cart-component";
 import Women from "../Pages/Women/women-component";
 import Men from "../Pages/Men/men-component";
 import Accessories from "../Pages/Accessories/accessories-component";
-import AddClothing from "../Pages/AddClothing/addClothing-component";
+import AddClothing from "../Features/AddClothing/addClothing-component";
+import DeleteClothing from "../Features/DeleteClothing/deleteClothing-component";
+import UpdateClothing from "../Features/UpdateClothing/updateClothing-component";
+import ClothingChanges from "../Pages/ClothingChanges/clothingChanges-component";
 // import * as ReactDOM from 'react-dom/client';
 
 const PageRouting = () => {
@@ -24,7 +27,10 @@ const PageRouting = () => {
           <Route exact path="/women" element={<Women/>}/>
           <Route exact path="/men" element={<Men/>}/>
           <Route exact path="/accessories" element={<Accessories/>}/>
+          <Route exact path="/clothingChanges" element={<ClothingChanges/>}/>
           <Route exact path="/addClothing" element={<AddClothing/>}/>
+          <Route exact path="/deleteClothing" element={<DeleteClothing/>}/>
+          <Route exact path="/updateClothing" element={<UpdateClothing/>}/>
          
         </Routes>
          <Footer/> 
