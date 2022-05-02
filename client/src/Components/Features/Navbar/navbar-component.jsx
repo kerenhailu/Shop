@@ -9,6 +9,7 @@ export default function Navbar() {
       <Link to="/women">Women</Link>
       <Link to="/men">Men</Link>
       <Link to="/cart">Cart</Link>
+      <Link to="/accessories">Accessories</Link>
     </div>
   )
 }
