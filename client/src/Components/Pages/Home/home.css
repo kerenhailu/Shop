@@ -1,0 +1,16 @@
+.Home{
+    width: 100vw;
+    height: 90vh;
+    background-image: url(http://www.wur.nl/upload/422cc661-0c79-41e9-b8e4-e2613be4fa5b_foto.jpg);
+    opacity: 0.8;
+
+}
+.Home a:link{
+    border: 1px black solid;
+    padding: 4%;
+    top: 40vh;
+    position: relative;
+    font-size: xx-large;
+    background-color: rgba(255, 255, 255, 0.514);
+    font-weight: bold;
+}
