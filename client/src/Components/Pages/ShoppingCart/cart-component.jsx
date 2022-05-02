@@ -19,6 +19,9 @@ export default function Cart() {
   console.log(clothing);
   console.log(loading);
   return (
+      <>
+      {
+        loading ? <img className='gifLoading' src='https://cdn.dribbble.com/users/46511/screenshots/1756041/loader-spinning.gif' alt='gifLoading' /> :
     <div>
       Cart
       <table>
@@ -40,5 +43,8 @@ export default function Cart() {
         </tr>
       </table>
     </div>
+     }</>
   );
+  
 }
+
