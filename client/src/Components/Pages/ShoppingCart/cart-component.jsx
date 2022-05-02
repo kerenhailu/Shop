@@ -11,7 +11,7 @@ export default function Cart() {
     setLoading(true);
     GetAllClothing()
       .then((data) => {
-        setClothing(...data);
+        setClothing(data);
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
@@ -23,8 +23,8 @@ export default function Cart() {
       {
         loading ? <img className='gifLoading' src='https://cdn.dribbble.com/users/46511/screenshots/1756041/loader-spinning.gif' alt='gifLoading' /> :
     <div>
-      Cart
-      <table>
+     <h1>Cart</h1>     
+      <table >
         <tr>
           <th>Type</th>
           <th>Price</th>
@@ -32,17 +32,22 @@ export default function Cart() {
           <th>Long</th>
           <th>Color</th>
           <th>Amount</th>
+          <th>Img</th>
+        </tr> 
+        {
+        clothing.map((costume,index)  =>
+        <tr key={index}>
+          <td>{costume.Type} </td>
+          <td>{costume.Price}</td>
+          <td>{costume.Name}</td>
+          <td>{costume.Long}</td>
+          <td>{costume.Color}</td>
+          <td>{costume.Amount}</td>
+          <td><img src={costume.Img}/></td>
         </tr>
-        <tr>
-          <td>{clothing.Type} </td>
-          <td>{clothing.Price}</td>
-          <td>{clothing.Name}</td>
-          <td>{clothing.Long}</td>
-          <td>{clothing.Color}</td>
-          <td>{clothing.Amount}</td>
-          {/* <td>{clothing.Img}</td> */}
-        </tr>
+        )}
       </table>
+
     </div>
      }</>
   );

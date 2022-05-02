@@ -2,19 +2,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ClothingContext } from '../../../Context/Clothing/clothing-context';
 import { LoadingContext } from '../../../Context/loading/loading-context';
 import { GetAllClothing } from '../../../Services/Clothing/clothing-service';
-// {
-//   userData.filter(user => user.userId === userFromMemory.id).map((user , index) => 
-//    <tr key={index}>
-//    <td className="text-left">{user.userName}</td>
-//    <td className="text-left">{user.userId}</td>
-//    <td className="text-left">{user.grade}</td>
-//    <td className="text-left">{user.test}</td>
-//    <td className="text-left">{user.course}</td>
-//   </tr> 
-//   )
-//   }
+
 export default function Men() {
-  // let [menData, setMenData] = useState([]);
   let { clothing, setClothing } = useContext(ClothingContext);
   let { loading, setLoading } = useContext(LoadingContext);
 
@@ -24,7 +13,6 @@ export default function Men() {
       .then((data) => {
           setClothing(data);
           console.log(data);
-        
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));

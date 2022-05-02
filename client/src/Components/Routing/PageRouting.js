@@ -8,6 +8,7 @@ import Cart from "../Pages/ShoppingCart/cart-component";
 import Women from "../Pages/Women/women-component";
 import Men from "../Pages/Men/men-component";
 import Accessories from "../Pages/Accessories/accessories-component";
+import AddClothing from "../Pages/AddClothing/addClothing-component";
 // import * as ReactDOM from 'react-dom/client';
 
 const PageRouting = () => {
@@ -23,6 +24,7 @@ const PageRouting = () => {
           <Route exact path="/women" element={<Women/>}/>
           <Route exact path="/men" element={<Men/>}/>
           <Route exact path="/accessories" element={<Accessories/>}/>
+          <Route exact path="/addClothing" element={<AddClothing/>}/>
          
         </Routes>
          <Footer/> 
