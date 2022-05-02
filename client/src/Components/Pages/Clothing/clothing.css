@@ -1,12 +1,18 @@
 .cardClothing{
-    width: 30vw;
+    width: 27vw;
     border: 1px solid black;
-    height: 50vh;
+    height: auto;
+    margin-Bottom: 2%;
+    margin: 1%;
 }
 .ClothingComp{
     width: 100vw;
-    height: 100vh;
+   /* padding: 1%;
+   padding-bottom: 5%; */
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:center;
+    margin-top: 2vh; 
     
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { ClothingContext } from '../../../Context/Clothing/clothing-context';
 import { LoadingContext } from '../../../Context/loading/loading-context';
 import { GetAllClothing } from '../../../Services/Clothing/clothing-service';
@@ -14,7 +14,7 @@ import { GetAllClothing } from '../../../Services/Clothing/clothing-service';
 //   )
 //   }
 export default function Men() {
-
+  // let [menData, setMenData] = useState([]);
   let { clothing, setClothing } = useContext(ClothingContext);
   let { loading, setLoading } = useContext(LoadingContext);
 
@@ -22,13 +22,14 @@ export default function Men() {
     setLoading(true);
     GetAllClothing()
       .then((data) => {
-        setClothing(...data);
+          setClothing(data);
+          console.log(data);
+        
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, []);
   console.log(clothing);
-  console.log(loading);
   return (
     <>
       {loading ? (
@@ -40,20 +41,24 @@ export default function Men() {
       ) : (
         <div className="ClothingComp">
           {
-        clothing.filter(costume => costume.Gender === "Men").map((costume , index) => 
+        clothing.filter(clothing => clothing.Gender === "Men").map((menClothing,index)  => 
         <div className="cardClothing" key={index}>
         <h2 >
-          Type : {costume.Type} <br />
-          Price : {costume.Price}
+          <img src={menClothing.Img} alt='imgmenClothing'/>
+          <br/>
+          Type : {menClothing.Type}
+           <br />
+          Price : {menClothing.Price}
           <br />
-          Name : {costume.Name}
+          Name : {menClothing.Name}
           <br />
-          Long : {costume.Long}
+          Long : {menClothing.Long}
           <br />
-          Color : {costume.Color}
+          Color : {menClothing.Color}
           <br />
-          Amount : {costume.Amount}
-          Gender : {costume.Gender}
+          Amount : {menClothing.Amount}
+          <br />
+          Gender : {menClothing.Gender}
           <br />
           <button>Buy</button>
         </h2>

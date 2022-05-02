@@ -13,7 +13,7 @@ export default function Clothing() {
     setLoading(true);
     GetAllClothing()
       .then((data) => {
-        setClothing(...data);
+        setClothing(data);
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
@@ -30,25 +30,32 @@ export default function Clothing() {
         />
       ) : (
         <div className="ClothingComp">
-          <h1>Clothing</h1>
           <br />
-          <div className="cardClothing">
-            <h2>
-              Type : {clothing.Type} <br />
-              Price : {clothing.Price}
+          {
+            clothing.map((costume,index)  =>
+           
+          <div className="cardClothing" key={index}>
+            <h3>
+            <img src={costume.Img} alt='imgCostume'/>
+          <br/>
+               Name : {costume.Name}
               <br />
-              Name : {clothing.Name}
+              Type : {costume.Type}
+               <br />
+              Long : {costume.Long}
               <br />
-              Long : {clothing.Long}
+              Color : {costume.Color}
               <br />
-              Color : {clothing.Color}
+              Amount : {costume.Amount}
               <br />
-              Amount : {clothing.Amount}
+              Gender : {costume.Gender}
+               <br />
+               Price : {costume.Price}
               <br />
               <button>Buy</button>
-            </h2>
+            </h3>
           </div>
-        </div>
+        )} </div>
       )}
     </>
   );
