@@ -4,6 +4,7 @@ import Footer from "../Features/Footer/footer-component";
 import Navbar from "../Features/Navbar/navbar-component";
 import Home from "../Pages/Home/home-component";
 import Clothing from "../Pages/Clothing/clothing-component";
+import Cart from "../Pages/ShoppingCart/cart-component";
 // import * as ReactDOM from 'react-dom/client';
 
 const PageRouting = () => {
@@ -15,6 +16,7 @@ const PageRouting = () => {
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/clothing" element={<Clothing/>}/>
+          <Route exact path="/cart" element={<Cart/>}/>
          
         </Routes>
          <Footer/> 
