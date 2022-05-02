@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { ClothingContext } from "../../../Context/Clothing/clothing-context";
 import { LoadingContext } from "../../../Context/loading/loading-context";
 import { GetAllClothing } from "../../../Services/Clothing/clothing-service";
-
+import './cart.css';
 export default function Cart() {
   let { clothing, setClothing } = useContext(ClothingContext);
   let { loading, setLoading } = useContext(LoadingContext);
@@ -40,6 +40,7 @@ export default function Cart() {
           <td>{clothing.Long}</td>
           <td>{clothing.Color}</td>
           <td>{clothing.Amount}</td>
+          {/* <td>{clothing.Img}</td> */}
         </tr>
       </table>
     </div>
