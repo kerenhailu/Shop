@@ -11,7 +11,6 @@ const Clothing = new schama(
     Long: { type: Boolean, required: true },
     Amount: { type: Number, required: true },
     Gender: { type: String, required: true },
-    
   },
   { timestamps: true }
 );

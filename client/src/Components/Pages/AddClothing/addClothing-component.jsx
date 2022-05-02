@@ -48,8 +48,8 @@ let[newClothing,setNewClothing]=useState({});
       <h1>Add</h1>
 <label>Type</label><br/>
 <input type="string" name='Type' placeholder="Enter the type" onChange={updateValue}/><br/>
-<label>Price</label><br/>
-<input type="number" name='Price' placeholder="Enter the price" onChange={updateValue}/><br/>
+<label>Gender</label><br/>
+<input type="string" name='Gender' placeholder="Enter the Men or Women" onChange={updateValue}/><br/>
 <label>Name</label><br/>
 <input type="string" name='Name' placeholder="Enter the name" onChange={updateValue}/><br/>
 <label>Long</label><br/>
@@ -58,6 +58,8 @@ let[newClothing,setNewClothing]=useState({});
 <input type="string" name='Color' placeholder="Enter the color" onChange={updateValue}/><br/>
 <label>Amount</label><br/>
 <input type="number" name='Amount' placeholder="Enter the amount" onChange={updateValue}/><br/>
+<label>Price</label><br/>
+<input type="number" name='Price' placeholder="Enter the price" onChange={updateValue}/><br/>
 <label>Img</label><br/>
 <input type="string" name='Img' placeholder="Enter the img" onChange={updateValue}/><br/>
 <button type="submit" onClick={addClothing} >Add </button>

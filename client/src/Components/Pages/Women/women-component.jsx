@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { ClothingContext } from '../../../Context/Clothing/clothing-context';
 import { LoadingContext } from '../../../Context/loading/loading-context';
 import { GetAllClothing } from '../../../Services/Clothing/clothing-service';
