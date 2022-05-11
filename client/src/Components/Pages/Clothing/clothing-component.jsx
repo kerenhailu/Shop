@@ -35,9 +35,10 @@ export default function Clothing() {
             clothing.map((costume,index)  =>
            
           <div className="cardClothing" key={index}>
-            <h3>
+           
             <img src={costume.Img} alt='imgCostume'/>
           <br/>
+          <p>
                Name : {costume.Name}
               <br />
               Type : {costume.Type}
@@ -51,9 +52,9 @@ export default function Clothing() {
               Gender : {costume.Gender}
                <br />
                Price : {costume.Price}
-              <br />
+              <br /></p>
               <button>Buy</button>
-            </h3>
+            
           </div>
         )} </div>
       )}
