@@ -12,6 +12,8 @@ import AddClothing from "../Features/AddClothing/addClothing-component";
 import DeleteClothing from "../Features/DeleteClothing/deleteClothing-component";
 import UpdateClothing from "../Features/UpdateClothing/updateClothing-component";
 import ClothingChanges from "../Pages/ClothingChanges/clothingChanges-component";
+import Cart from "../Pages/Cart/cart-component";
+
 // import * as ReactDOM from 'react-dom/client';
 
 const PageRouting = () => {
@@ -23,7 +25,8 @@ const PageRouting = () => {
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/clothing" element={<Clothing/>}/>
-          <Route exact path="/cart" element={<TableClothing/>}/>
+          <Route exact path="/tableClothing" element={<TableClothing/>}/>
+          <Route exact path="/cartShopping" element={<Cart/>}/>
           <Route exact path="/women" element={<Women/>}/>
           <Route exact path="/men" element={<Men/>}/>
           <Route exact path="/accessories" element={<Accessories/>}/>
@@ -31,7 +34,6 @@ const PageRouting = () => {
           <Route exact path="/addClothing" element={<AddClothing/>}/>
           <Route exact path="/deleteClothing" element={<DeleteClothing/>}/>
           <Route exact path="/updateClothing" element={<UpdateClothing/>}/>
-         
         </Routes>
          <Footer/> 
       </BrowserRouter>

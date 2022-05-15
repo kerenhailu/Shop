@@ -1,7 +1,7 @@
 const basic_url =
   process.env.NODE_ENV === "production"
     ? "https://final-on-it-project.herokuapp.com/users"
-    : "http://localhost:6500/users";
+    : "http://localhost:3009/users";
 
 export const GetAllUsers = async () => {
   return await fetch(`${basic_url}`)

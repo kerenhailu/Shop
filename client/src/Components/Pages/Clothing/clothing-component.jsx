@@ -25,7 +25,7 @@ export default function Clothing() {
   console.log(clothing);
   console.log(loading);
 
-
+// מדפיס ללוג אבל הפוסט לא עובד
   const addClothingToCart = (e,clothingToCart) => {
     e.preventDefault();
     setClothingToCart({...clothingToCart})
@@ -43,7 +43,7 @@ export default function Clothing() {
     console.log(clothingToDelete);
   };
   const updateValue = (e) => {
-    setClothingToDelete[e.target.name] = e.target.value;
+    clothingToCart[e.target.name] = e.target.value;
     console.log(clothingToDelete);
   
   };
@@ -73,7 +73,7 @@ export default function Clothing() {
           <p onChange={updateValue}>Amount : {costume.Amount}</p>
           <p onChange={updateValue}>Gender : {costume.Gender}</p>
           <p onChange={updateValue}>Price : {costume.Price}</p>
-              <button onClick={addClothingToCart}>Buy</button>
+              <button onClick={(e)=>addClothingToCart(e,costume)}>Buy</button>
             
           </div>
         )} </div>

@@ -23,7 +23,7 @@ const cartRouter = require('./Routes/cart-router');
 
  app.use('/users', usersRouter);
  app.use('/clothing', clothingRouter);
- app.use('/cart', clothingRouter);
+ app.use('/cart', cartRouter);
 
 
 

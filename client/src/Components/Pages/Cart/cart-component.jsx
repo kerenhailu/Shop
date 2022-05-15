@@ -1,15 +1,14 @@
-import React, { useContext, useEffect } from "react";
-import { CartContext } from "../../../Context/Cart/cart-context";
+import React, { useContext, useEffect, useState } from "react";
 import { LoadingContext } from "../../../Context/loading/loading-context";
-import { GetAllClothing } from "../../../Services/Clothing/clothing-service";
-import './tableClothing.css';
+import { GetAllCart } from "../../../Services/Cart/cart-service";
+
 export default function Cart() {
-  let { cart, setCart } = useContext(CartContext);
+    let [cart,setCart]=useState([{}])
   let { loading, setLoading } = useContext(LoadingContext);
 
   useEffect(() => {
     setLoading(true);
-    GetAllClothing()
+    GetAllCart()
       .then((data) => {
         setCart(data);
       })
