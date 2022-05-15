@@ -2,21 +2,51 @@ import React, { useContext, useState } from 'react'
 import { ClothingContext } from '../../../Context/Clothing/clothing-context';
 import { LoadingContext } from '../../../Context/loading/loading-context';
 import { PostClothing } from '../../../Services/Clothing/clothing-service';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-125%, -50%)',
+  width: 410,
+  borderRadius: "5px" ,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 export default function AddClothing() {
 let[newClothing,setNewClothing]=useState({});
+const [open, setOpen] = useState(false);
 
   const addClothing = (e) => {
     e.preventDefault();
     setNewClothing({...newClothing})
     PostClothing(newClothing);
     console.log(newClothing);
+    setOpen(!open);
   }
   const updateValue = (e) => {
     newClothing[e.target.name] = e.target.value;
   };
   return (
     <div>
+      <Modal
+        open={open}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+           <p> You add Successfully !</p>
+           <button onClick={() => window.location.reload()}>OK</button>
+          </Typography>
+        </Box>
+      </Modal>
       <div className='addClothing'>
       <h1>Add</h1>
 <label>Type</label><br/>
