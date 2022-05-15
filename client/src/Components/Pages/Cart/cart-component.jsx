@@ -1,22 +1,22 @@
 import React, { useContext, useEffect } from "react";
-import { ClothingContext } from "../../../Context/Clothing/clothing-context";
+import { CartContext } from "../../../Context/Cart/cart-context";
 import { LoadingContext } from "../../../Context/loading/loading-context";
 import { GetAllClothing } from "../../../Services/Clothing/clothing-service";
-import './cart.css';
+import './tableClothing.css';
 export default function Cart() {
-  let { clothing, setClothing } = useContext(ClothingContext);
+  let { cart, setCart } = useContext(CartContext);
   let { loading, setLoading } = useContext(LoadingContext);
 
   useEffect(() => {
     setLoading(true);
     GetAllClothing()
       .then((data) => {
-        setClothing(data);
+        setCart(data);
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, []);
-  console.log(clothing);
+  console.log(cart);
   console.log(loading);
   return (
       <>
@@ -35,7 +35,7 @@ export default function Cart() {
           <th>Img</th>
         </tr> 
         {
-        clothing.map((costume,index)  =>
+        cart.map((costume,index)  =>
         <tr key={index}>
           <td>{costume.Type} </td>
           <td>{costume.Price}</td>
