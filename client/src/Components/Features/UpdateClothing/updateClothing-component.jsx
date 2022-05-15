@@ -1,16 +1,17 @@
 import React, { useContext, useState } from 'react'
 import { ClothingContext } from '../../../Context/Clothing/clothing-context';
 import { PutClothing } from '../../../Services/Clothing/clothing-service';
-
+// ! not work 
 export default function UpdateClothing() {
-  let [userToUpdate, setUserToUpdate] = useState({});
+  let [clothingToUpdate, setClothingToUpdate] = useState({});
+  // let [clothingToUpdate, setClothingToUpdate] = useState({});
   let { clothing, setClothing } = useContext(ClothingContext);
 
-const updateUser = (requestedGrade, newGrade) => {
+const updateUser = (requestedClothing, newClothing) => {
   // setLoading(true);
-  setUserToUpdate({ ...userToUpdate });
-  console.log({ requestedGrade, newGrade });
-  PutClothing({ requestedGrade, newGrade })
+  setClothingToUpdate({ ...clothingToUpdate });
+  console.log({ requestedClothing, newClothing });
+  PutClothing({ requestedClothing, newClothing })
     .then((res) => res.json())
     .then((data) => setClothing(data))
     .catch((err) => console.log(err))
@@ -22,7 +23,7 @@ const updateValue = (e) => {
 return (
   <div>
     <div className='addClothing'>
-    <h1>Add</h1>
+    <h1>Update Clothing</h1>
 <label>Type</label><br/>
 <input type="string" name='Type' placeholder="Enter the type" onChange={updateValue} required/><br/>
 <label>Gender</label><br/>
@@ -39,9 +40,8 @@ return (
 <input type="number" name='Price' placeholder="Enter the price" onChange={updateValue}required/><br/>
 <label>Img</label><br/>
 <input type="string" name='Img' placeholder="Enter the img" onChange={updateValue} required/><br/>
-<button type="submit" onClick={updateUser} >Add </button>
+<button type="submit" onClick={()=>updateUser(clothing, clothingToUpdate)} >update </button>
  </div> 
  </div>
 )
-
 }
