@@ -16,12 +16,14 @@ app.get('/',(req,res)=>res.send('workkk!'));
 
 const clothingRouter=require('./Routes/clothing-router');
 const usersRouter = require('./Routes/users-router');
+const cartRouter = require('./Routes/cart-router');
 
 // app.use('/news', passport.authenticate("jwt",{session:false}),newsRouter)
 // app.use(passport.initialize());
 
  app.use('/users', usersRouter);
  app.use('/clothing', clothingRouter);
+ app.use('/cart', clothingRouter);
 
 
 
