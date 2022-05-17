@@ -11,6 +11,7 @@ export default function Clothing() {
   let { loading, setLoading } = useContext(LoadingContext);
   let [clothingToDelete,setClothingToDelete] = useState({});
   let [clothingToCart,setClothingToCart] = useState({});
+  const [open,setOpen]=useState(false);
 
 
   useEffect(() => {
@@ -32,6 +33,7 @@ export default function Clothing() {
     PostCart(clothingToCart);
     console.log(clothingToCart);
     // setOpen(!open);
+
   }
   const deleteClothing = (clothingToDeletea) => {
     setLoading(true);
