@@ -5,7 +5,7 @@ import { GetAllCart } from "../../../Services/Cart/cart-service";
 export default function Cart() {
     let [cart,setCart]=useState([{}])
   let { loading, setLoading } = useContext(LoadingContext);
-
+// cart
   useEffect(() => {
     setLoading(true);
     GetAllCart()
