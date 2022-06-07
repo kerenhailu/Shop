@@ -1,6 +1,6 @@
 const basic_url =
   process.env.NODE_ENV === "production"
-    ? "https://final-on-it-project.herokuapp.com/cart"
+    ? "https://shop-keren-app.herokuapp.com/cart"
     : "http://localhost:3009/cart";
 export const GetAllCart = async () => {
   return await fetch(`${basic_url}`, {

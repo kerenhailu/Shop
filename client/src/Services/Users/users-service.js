@@ -1,6 +1,6 @@
 const basic_url =
   process.env.NODE_ENV === "production"
-    ? "https://final-on-it-project.herokuapp.com/users"
+    ? "https://shop-keren-app.herokuapp.com/users"
     : "http://localhost:3009/users";
 
 export const GetAllUsers = async () => {
