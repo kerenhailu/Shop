@@ -10,7 +10,7 @@ const path=require('path');
 const clothingRouter=require('./Routes/clothing-router');
 const usersRouter = require('./Routes/users-router');
 const cartRouter = require('./Routes/cart-router');
-app.get('/',(req,res)=>res.send('workkk!'));
+// app.get('/',(req,res)=>res.send('workkk!'));
 // const passport = require('passport');
 // const passportMiddleware = require('./config/passport');
 // passportMiddleware(passport);
